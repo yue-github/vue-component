@@ -4,7 +4,7 @@
       <span uk-icon="icon: cloud-upload"></span>
       <span class="uk-text-middle">Attach binaries by dropping them here or</span>
       <div uk-form-custom>
-        <input type="file" multiple name="file">
+        <input type="file" multiple>
         <span class="uk-link">点击选择</span>
       </div>
     </div>
@@ -15,12 +15,12 @@
 </template>
 
 <script>
-  let domain='http://gdmzd.com/yes/public'
+  let domain='http://gdmzd.com/geomancy/public'
   export default {
     name: 'UikitUpload',
     data(){
       return{
-        imgSrc:domain+'/uploads/2019-04-30-05-26-37-5cc7dc8d13f77.jpg',
+        imgSrc:'https://miao.su/images/2019/02/19/xuewen5df03.md.jpg',
         domain:domain
       }
     },
@@ -36,10 +36,11 @@
 
     UIkit.upload('.js-upload', {
 
-      url: this.domain+'/api/test/upload',
+      // url: this.domain+'/api/jincheng/upload',
+      url: 'http://education-test.bayou-tech.cn/file/import_products',
       type:'post',
       multiple: true,
-      name:'file',
+      name:'import',
       beforeSend: function (res) {
         console.log(res.data)
         // this.$axios.post('')

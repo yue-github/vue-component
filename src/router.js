@@ -7,9 +7,10 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/q',
+      path: '/home',
       name: 'home',
-      component: Home
+      component: Home,
+      redirect:"/Audio"
     },
     {
       path: '/about',
@@ -70,17 +71,17 @@ export default new Router({
       component:()=>import ('./views/uikit/UikitUpload')
     },
     {
-      path:'/',
+      path:'/Audio',
       name:'Audio',
       component:()=>import ('./views/element/Audio')
     },
     
-    {path:"*",redirect:"/"}
+    {path:"*",redirect:"/Audio"}
 
 
 
 
 
-  ],
-  mode:'history'
+  ]
+  
 })

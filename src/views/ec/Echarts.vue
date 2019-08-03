@@ -19,7 +19,10 @@ export default {
   methods:{
 
   },
+ 
+
   mounted(){
+     
   	 var myChart = echarts.init(document.getElementById('main'));
     //  myChart.setOption({
     //     title: {
